@@ -2,6 +2,7 @@ package com.ual.document.services.implementation;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.time.Instant;
 
 import com.ual.document.services.ReminderService;
 import org.slf4j.Logger;
@@ -29,6 +30,9 @@ public class Scheduler {
            // log.info("The event is in two hours get Ready!!", event.remindByDate("2023-10-10 12:00:00"));
             log.info("The time is now {}", dateFormat.format(new Date()));
             System.out.println("run");
+            final Date nowDate = Date.from(Instant.now());
+            
+            System.out.println(reminderRepository.getReminderByDate(nowDate));
 
             //System.out.println(reminderRepository.getDateGreaterThanCurrentTime("20", String.valueOf(DATETIME)));
             /*if(
