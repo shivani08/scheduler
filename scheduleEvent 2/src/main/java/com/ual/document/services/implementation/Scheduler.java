@@ -34,17 +34,7 @@ public class Scheduler {
             
             System.out.println(reminderRepository.getReminderByDate(nowDate));
 
-            //System.out.println(reminderRepository.getDateGreaterThanCurrentTime("20", String.valueOf(DATETIME)));
-            /*if(
-                    Instant
-                            .parse( "2022-04-23 04:55:00" )
-                            .isAfter(
-                                    Instant.now()
-                            )
-            ){
-                System.out.println("testing after current time");
-            }
-*/
+
     }
 }
 
