@@ -21,7 +21,7 @@ public interface ReminderRepository extends CrudRepository<Reminder, String> {
     @Query(value = "select event from Reminder event where STATUS = :STATUS")
     public List<Reminder> getReminderBySTATUS(@Param("STATUS") String STATUS);
 
-    @Query(value ="select event from Reminder event where DATETIME > CURRENT_TIMESTAMP")
+    @Query(value ="select event from Reminder event where :DATETIME > CURRENT_TIMESTAMP")
     public List<Reminder> getReminderByDate(@Param("DATETIME") Date DATETIME);
 
 
