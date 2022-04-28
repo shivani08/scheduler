@@ -25,9 +25,4 @@ public interface ReminderRepository extends CrudRepository<Reminder, String> {
     public List<Reminder> getReminderByDate(@Param("DATETIME") Date DATETIME);
 
 
-
-   // @Query(value="select event from Reminder where DATETIME > ?1")
-    //long getDateGreaterThanCurrentTime(String id, String DATETIME);
-
-//SELECT * FROM geeksforgeeks WHERE Ordered > GETDATE();
 }
